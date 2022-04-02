@@ -8,5 +8,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="d3.v5" level="application" />
+    <orderEntry type="library" name="d3-selection-multi.v1" level="application" />
+    <orderEntry type="library" name="fuse.js" level="application" />
   </component>
 </module>

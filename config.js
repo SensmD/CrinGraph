@@ -14,10 +14,10 @@ const init_phones = ["HTH67"],                      // Optional. Which graphs to
       alt_tutorial = false,                         // Display a configurable frequency response guide below the graph
       site_url = 'graph.html',                      // URL of your graph "homepage"
       share_url = true,                             // If true, enables shareable URLs
-      watermark_text = "CrinGraph",                 // Optional. Watermark appears behind graphs
+      watermark_text = "拧八圈",                 // Optional. Watermark appears behind graphs
       watermark_image_url = "cringraph-logo.svg",   // Optional. If image file is in same directory as config, can be just the filename
-      page_title = "CrinGraph",                     // Optional. Appended to the page title if share URLs are enabled
-      page_description = "View and compare frequency response graphs for earphones",
+      page_title = "拧八圈",                     // Optional. Appended to the page title if share URLs are enabled
+      page_description = "查看并比较耳机的频率响应图",
       accessories = false,                          // If true, displays specified HTML at the bottom of the page. Configure further below
       externalLinksBar = true,                      // If true, displays row of pill-shaped links at the bottom of the page. Configure further below
       restricted = false,                           // Enables restricted mode. More restricted options below
@@ -33,9 +33,9 @@ const init_phones = ["HTH67"],                      // Optional. Which graphs to
 
 // Specify which targets to display
 const targets = [
-    { type:"Neutral",    files:["Diffuse Field","Etymotic","Free Field","Innerfidelity ID"] },
-    { type:"Reviewer",   files:["Antdroid","Bad Guy","Banbeucmas","Crinacle","Precogvision","Super Review"] },
-    { type:"Preference", files:["Harman","Rtings","Sonarworks"] }
+    { type:"参考系",    files:["Diffuse Field","Etymotic","Free Field","Innerfidelity ID"] },
+    { type:"相关网站曲线",   files:["Antdroid","Bad Guy","Banbeucmas","Crinacle","Precogvision","Super Review"] },
+    { type:"喜好", files:["Harman","Rtings","Sonarworks"] }
 ];
 
 

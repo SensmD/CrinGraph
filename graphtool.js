@@ -34,14 +34,14 @@ doc.html(`
         </div>
 
         <div class="zoom">
-          <span>Zoom:</span>
-          <button>Bass</button>
-          <button>Mids</button>
-          <button>Treble</button>
+          <span>缩放：</span>
+          <button>低频</button>
+          <button>中频</button>
+          <button>高频</button>
         </div>
 
         <div class="normalize">
-          <span>Normalize:</span>
+          <span>标准范围：</span>
           <div>
             <input type="number" inputmode="decimal" id="norm-phon" required min="0" max="100" value="`+ default_norm_db +`" step="1" onclick="this.focus();this.select()"></input>
             <span>dB</span>
@@ -51,20 +51,20 @@ doc.html(`
             <span>Hz</span>
           </div>
           <span class="helptip">
-            ?<span>Choose a dB value to normalize to a target listening level, or a Hz value to make all curves match at that frequency.</span>
+            ?<span>选择一个dB值将其标准化为目标监听级别，或选择一个Hz值使所有曲线在该频率下匹配。</span>
           </span>
         </div>
 
         <div class="smooth">
-          <span>Smooth:</span>
+          <span>圆滑度：</span>
           <input type="number" inputmode="decimal" id="smooth-level" required min="0" value="5" step="any" onclick="this.focus();this.select()"></input>
         </div>
 
         <div class="miscTools">
-          <button id="inspector"><span>╞</span> inspect</button>
-          <button id="label"><span>▭</span> label</button>
-          <button id="download"><span><u>⇩</u></span> screenshot</button>
-          <button id="recolor"><span>○</span> recolor</button>
+          <button id="inspector"><span>╞</span> 检查</button>
+          <button id="label"><span>▭</span> 标签</button>
+          <button id="download"><span><u>⇩</u></span> 保存为图片</button>
+          <button id="recolor"><span>○</span> 重新上色</button>
         </div>
 
         <div class="expand-collapse">
@@ -92,8 +92,8 @@ doc.html(`
           <tbody class="curves"></tbody>
           <tr class="addPhone">
             <td class="addButton">⊕</td>
-            <td class="helpText" colspan="5">(or middle/ctrl-click when selecting; or pin other IEMs)</td>
-            <td class="addLock">LOCK</td>
+            <td class="helpText" colspan="5">（用中键/ctrl键单击选择；或锁定其他IEM）</td>
+            <td class="addLock">锁定</td>
           </tr>
           <tr class="mobile-helper"></tr>
         </table>
@@ -108,11 +108,11 @@ doc.html(`
       <div class="controls">
         <div class="select" data-selected="models">
           <div class="selector-tabs">
-            <button class="brands" data-list="brands">Brands</button>
-            <button class="models" data-list="models">Models</button>
+            <button class="brands" data-list="brands">品牌</button>
+            <button class="models" data-list="models">型号</button>
           </div>
 
-          <input class="search" type="text" inputmode="search" placeholder="Search" onclick="this.focus();this.select()"/>
+          <input class="search" type="text" inputmode="search" placeholder="搜索你想要的耳机型号" onclick="this.focus();this.select()"/>
 
           <svg class="chevron" viewBox="0 0 12 8" preserveAspectRatio="none">
             <path d="M0 0h4c0 1.5,5 3,7 4c-2 1,-7 2.5,-7 4h-4c0 -3,4 -3,4 -4s-4 -1,-4 -4"/>
@@ -1024,7 +1024,7 @@ try {
 }
 
 let ifURL = typeof share_url !== "undefined" && share_url;
-let baseTitle = typeof page_title !== "undefined" ? page_title : "CrinGraph";
+let baseTitle = typeof page_title !== "undefined" ? page_title : "拧八圈";
 let baseDescription = typeof page_description !== "undefined" ? page_description : "View and compare frequency response graphs";
 let baseURL;  // Set by setInitPhones
 function addPhonesToUrl() {
@@ -1044,7 +1044,7 @@ function addPhonesToUrl() {
     }
     targetWindow.history.replaceState("", title, url);
     targetWindow.document.title = title;
-    targetWindow.document.querySelector("meta[name='description']").setAttribute("content",baseDescription + ", including " + namesCombined +".");
+    targetWindow.document.querySelector("meta[name='description']").setAttribute("内容",baseDescription + ", 包括 " + namesCombined +".");
 }
 function updatePaths(trigger) {
     clearLabels();
